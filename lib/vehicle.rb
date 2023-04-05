@@ -23,4 +23,10 @@ class Vehicle
   def add_passenger(passenger)
     @passengers << passenger
   end
+
+  def num_adults
+    @passengers.count do |passenger|
+      passenger.age >= 18
+    end
+  end
 end
