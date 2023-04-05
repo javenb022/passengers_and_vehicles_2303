@@ -4,7 +4,7 @@ class Park
     @name = name
     @admission_price = admission_price
     @vehicles = []
-    @revenue = 0
+    @revenue_total = 0
   end
 
   def add_vehicle(vehicle)
@@ -17,5 +17,9 @@ class Park
     end
   end
 
-
+  def revenue
+    @vehicles.map do |vehicle|
+      @revenue_total = vehicle.passengers.count * 10
+    end
+  end
 end
