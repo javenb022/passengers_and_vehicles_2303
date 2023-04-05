@@ -19,4 +19,8 @@ class Vehicle
   def speed 
     @odometer += 70
   end
+
+  def add_passenger(passenger)
+    @passengers << passenger
+  end
 end
